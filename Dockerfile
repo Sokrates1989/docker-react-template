@@ -22,9 +22,10 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Optional: Replace NGINX config if needed.
 # COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy entrypoint script.
+# Copy entrypoint script
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /entrypoint.sh && \
+    dos2unix /entrypoint.sh
 
 # Enter container using port 80 (default http port).
 EXPOSE 80
