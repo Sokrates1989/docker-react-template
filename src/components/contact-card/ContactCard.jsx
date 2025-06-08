@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from "./Avatar";
 import ContactDetail from "./ContactDetail";
 
-function ContactCard(props) {
+export default function ContactCard(props) {
   return (
     <div className="card-wrapper">
       <div className="card">
@@ -39,7 +39,7 @@ function ContactCard(props) {
  * @param {number} index - The current index in the array, used as React's key.
  * @returns {JSX.Element} A ContactCard component populated with contact data.
  */
-function createContactCard(contact, index) {
+export function createContactCard(contact, index) {
   return (
     <ContactCard
       key={index}
@@ -53,7 +53,7 @@ function createContactCard(contact, index) {
 
 
 
-function getContactSummary(contacts) {
+export function getContactSummary(contacts) {
   const names = contacts.map(contact => contact.name);
 
   if (names.length === 0) {
@@ -66,9 +66,3 @@ function getContactSummary(contacts) {
     return names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
   }
 }
-
-export {
-  ContactCard as default,
-  createContactCard,
-  getContactSummary
-};

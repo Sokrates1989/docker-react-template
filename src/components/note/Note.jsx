@@ -1,5 +1,8 @@
 import React from "react";
 
+// Style.
+import "./note.css";
+
 function Note(props) {
   return (
     <div className="note" >
