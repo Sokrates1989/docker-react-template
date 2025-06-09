@@ -1,0 +1,29 @@
+{
+  "sidebar": {
+    "title": "Docker React Frontend Template",
+    "home": "Startseite",
+    "contacts": "Kontakte",
+    "notes": "Notizen"
+  },
+  "navbar": {
+    "profile": "Profil",
+    "logout": "Abmelden"
+  },
+  "footer": {
+    "rights_reserved": "Alle Rechte vorbehalten."
+  },
+  "home": {
+    "title": "Docker React Frontend Template"
+  },
+  "contacts": {
+    "title": "Docker React Frontend Template - Kontakte",
+    "heading": "Meine Kontakte",
+    "summary_intro": "Meine Kontakte sind: {{summary}}",
+    "reflection_question": "Was hast du in deinem Leben erreicht?",
+    "and": "und"
+  },
+  "notes": {
+    "title": "Docker React Frontend Template - Notizen",
+    "heading": "Meine Notizen"
+  }
+}

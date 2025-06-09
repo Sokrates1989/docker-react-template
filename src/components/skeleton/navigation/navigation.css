@@ -27,7 +27,7 @@
   padding: 1rem 2rem;
   border-bottom: 1px solid #e0e0e0;
   font-family: "Segoe UI", sans-serif;
-  margin: auto -16px;
+  margin: 0;
   font-size: 1rem;
 }
 
@@ -39,7 +39,7 @@
   padding: 0.75rem 2rem;
   font-size: 0.95rem;
   border-bottom: 1px solid #e0e0e0;
-  margin: auto -16px;
+  margin: 0;
 }
 
 .sub-nav-1 .nav-link {
@@ -67,7 +67,7 @@
   border-bottom: 1px dashed #ccc;
   font-size: 0.9rem;
   font-style: italic;
-  margin: auto -16px;
+  margin: 0;
 }
 
 .sub-nav-2 .nav-link {

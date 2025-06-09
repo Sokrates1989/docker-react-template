@@ -53,7 +53,7 @@ export function createContactCard(contact, index) {
 
 
 
-export function getContactSummary(contacts) {
+export function getContactSummary(contacts, t) {
   const names = contacts.map(contact => contact.name);
 
   if (names.length === 0) {
@@ -61,8 +61,8 @@ export function getContactSummary(contacts) {
   } else if (names.length === 1) {
     return names[0];
   } else if (names.length === 2) {
-    return names.join(" and ");
+    return names.join(` ${t("contacts.and")} `);
   } else {
-    return names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+    return names.slice(0, -1).join(", ") + ` ${t("contacts.and")} ` + names[names.length - 1];
   }
 }
