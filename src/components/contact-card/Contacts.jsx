@@ -5,6 +5,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Sidebar from "../sidebar/Sidebar";
 import Navigation from "../navigation/Navigation";
+import SubNavigation1 from "../navigation/SubNavigation1";
 
 // Components.
 import ContactCard, { createContactCard, getContactSummary } from "./ContactCard";
@@ -24,6 +25,7 @@ function Contacts() {
       <div className="main-content">
         <Header title="Contacts" />
         <Navigation currentSelection="contacts" />
+        <SubNavigation1 currentSelection="contacts" />
         
         
         <h1 className="heading">My Contacts</h1>
