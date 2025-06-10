@@ -17,12 +17,15 @@
   "contacts": {
     "title": "Docker React Frontend Template - Contacts",
     "heading": "My Contacts",
+    "sub_navigation_1_heading": "Sub-Navigation 1",
     "summary_intro": "My Contacts are: {{summary}}",
     "reflection_question": "What did you achieve in your life?",
     "and": "and"
   },
   "notes": {
     "title": "Docker React Frontend Template - Notes",
-    "heading": "My Notes"
+    "heading": "My Notes",
+    "sub_navigation_1_heading": "Sub-Navigation 1",
+    "sub_navigation_2_heading": "Sub-Navigation 2"
   }
 }

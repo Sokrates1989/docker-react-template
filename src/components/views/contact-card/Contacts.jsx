@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Header, footer, Sidebar, Navigation.
@@ -7,6 +8,8 @@ import Footer from "../../skeleton/footer/Footer";
 import Sidebar from "../../skeleton/sidebar/Sidebar";
 import Navigation from "../../skeleton/navigation/Navigation";
 import SubNavigation1 from "../../skeleton/navigation/SubNavigation1";
+import MobileAccordionNav from "../../skeleton/navigation/MobileAccordionNav";
+import MobileBottomNav from "../../skeleton/navigation/MobileBottomNav";
 
 // Components.
 import ContactCard, { createContactCard, getContactSummary } from "./ContactCard";
@@ -19,16 +22,35 @@ import "./contact-card.css";
 
 
 function Contacts() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { t } = useTranslation();
   return (
     <>
-    
-      <Header title={t("contacts.title")} />
+
+      <Header 
+        title={t("contacts.title")} 
+        onMenuClick={() => setSidebarOpen(!sidebarOpen)} 
+      />
       <div className="app-body">
-        <Sidebar currentSelection="contacts" />
+        <Sidebar 
+          currentSelection="contacts" 
+          isOpen={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        />
         <div className="page-wrapper">
-          <Navigation currentSelection="contacts" />
-          <SubNavigation1 currentSelection="contacts" />
+          {/* Desktop Navigation (hidden on mobile) */}
+          <div className="desktop-nav">
+            <Navigation currentSelection="contacts" />
+            <SubNavigation1 currentSelection="contacts" />
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="mobile-nav">
+            <MobileAccordionNav title={t("contacts.sub_navigation_1_heading")}>
+              <SubNavigation1 mobileMode currentSelection="contacts" />
+            </MobileAccordionNav>
+          </div>
+          <MobileBottomNav currentSelection="contacts" />
 
           
           <div className="main-content">
